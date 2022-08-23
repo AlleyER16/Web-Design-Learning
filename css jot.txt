@@ -1,0 +1,62 @@
+Float
+	Elements with float declaration are out of flow
+	They do not overlap surrounding elements but elements get's wrapped around them
+	Container element do not recognize them	
+
+	float: left
+	float: right
+
+
+	To make container recognize them add a block element to the container with the declaration below
+		clear:both
+
+
+Flex Container
+	display: flex
+	
+	All flex items are as tall as tallest flex items
+
+	align-items
+
+		stretch[default]
+
+		[below values height would wrap content and align]		
+
+		center
+		flex-start
+		flex-end
+
+	justify-content
+		
+		center
+		space-between
+
+	gap
+
+Flex Item
+	align-self
+		
+		override flex container align-item
+
+	order
+
+
+Grid
+
+	grid track: row/column
+	grid lines
+	grid gaps(gutters)
+	grid cell
+
+
+Grid container
+	grid-template-rows
+	grid-template-columns
+	row-gap
+	column-gap
+	justify-items
+	align-items
+
+Grid items
+	grid-column: start / end | span num
+	grid-row: start / end | span num

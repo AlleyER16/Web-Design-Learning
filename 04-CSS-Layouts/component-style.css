@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    font-family: monospace;
+}
+
+/* .product-container {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+} */
+
+.product {
+    border: 5px solid #000;
+    width: 810px;
+    max-width: 100%;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    align-items: center;
+}
+
+.product-title {
+    background-color: #f7f7f7;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+    position: relative;
+
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.product-title::before {
+    content: "sale";
+    background-color: #ec4e4e;
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-info-container {
+}
+
+.price-shipping {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.shipping {
+    text-transform: uppercase;
+    color: #444;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.product-link:link,
+.product-link:visited {
+    color: black;
+}
+
+.product-link:hover,
+.product-link:active {
+    text-decoration: none;
+}
+
+.colors {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.color {
+    width: 15px;
+    height: 15px;
+}
+
+.bg-1 {
+    background-color: #000;
+}
+
+.bg-2 {
+    background-color: #4141ec;
+}
+
+.bg-3 {
+    background-color: #ec4e4e;
+}
+
+.bg-4 {
+    background-color: #e7e780;
+}
+
+.bg-5 {
+    background-color: #6de06d;
+}
+
+.bg-6 {
+    background-color: #c46c6c;
+}
+
+.product-details-container {
+}
+
+.product-details-header {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.product-details {
+    list-style: square;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+.cart-btn {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 15px;
+
+    grid-column: 1 / -1;
+}
+
+.cart-btn:hover {
+    color: #000;
+    background-color: #fff;
+    border-top: 5px solid #000;
+}

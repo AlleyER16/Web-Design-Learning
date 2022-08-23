@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #444;
+    border-top: 5px solid #1098ad;
+    position: relative;
+}
+
+main {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.main-header {
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+nav {
+    font-size: 18px;
+}
+
+.post-header {
+    margin-bottom: 40px;
+}
+
+article {
+    margin-bottom: 60px;
+}
+
+aside {
+    background-color: #f7f7f7;
+    border-top: 5px solid #1098ad;
+    border-bottom: 5px solid #1098ad;
+    padding: 50px 40px;
+}
+
+h1,
+h2,
+h3 {
+    color: #1098ad;
+}
+
+h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+h1::first-letter {
+    font-style: normal;
+    margin-right: 5px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: "top";
+    text-transform: uppercase;
+    background-color: #ffe70e;
+    color: #444;
+    padding: 5px 10px;
+    font-size: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+ul,
+ol {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
+/*Descendant selector sucks cause it tries to define HTML structure*/
+/* header p {
+    font-style: italic;
+} */
+
+#author {
+    font-style: italic;
+    font-size: 18px;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+.related-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.related {
+    list-style: none;
+    margin-left: 0;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+    margin: 0;
+}
+
+a:link {
+    color: #1098ad;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1098ad;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: bold;
+    /* text-decoration: underline dotted orangered; */
+}
+
+nav a:link {
+    margin-right: 30px;
+    display: inline-block;
+}
+
+nav a:link:last-child {
+    margin-right: 0;
+}
+
+.like-btn {
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+/*FLOATS*/
+/*
+.author-img {
+    float: left;
+}
+
+.author {
+    float: left;
+    padding-left: 10px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+article {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 28%;
+}
+
+footer {
+    clear: both;
+}
+*/
+
+/*Flexbox*/
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.author {
+    margin: 0;
+}
+
+.related-post {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.related-link:link {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.related-author {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* .main-content {
+    display: flex;
+    gap: 75px;
+    margin-bottom: 60px;
+}
+
+article {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+aside {
+    flex: 0 0 300px;
+    align-self: flex-start;
+} */
+
+/*GRID*/
+main {
+    display: grid;
+    grid-template-columns: 825px 300px;
+    grid-template-rows: auto auto auto;
+    column-gap: 75px;
+}
+
+header {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+aside {
+    align-self: start;
+}
+
+footer {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+}
